@@ -4,6 +4,7 @@
     --bg-color-nav: #252422;
     --color-nav: #fffcf2;
     --bg-color-main: #27213c;
+    --color-main-span: #941c2f;
 }
 
 * {
@@ -51,7 +52,7 @@ a {
     padding: 8px;
     font-size: 2rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.2px;
 }
 
 
@@ -65,9 +66,48 @@ a {
 /* main-section */
 
 main {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--bg-color-main);
 }
+
+/*welcome-section*/
+
+#welcome-section {
+    width: 100%;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+#welcome-section > h1{
+    color: var(--color-main-span);    
+    margin-top: -64px;
+    font-size: 4rem;
+    line-height: 50px;
+    font-weight: 800;
+    text-shadow: 1.2px  1.2px var(--color-nav);
+}
+#welcome-section > p{
+    color: var(--color-nav); 
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+#welcome-section h1 > span{
+    color: var(--color-nav);
+    text-align: right;
+    border: 3px solid var(--color-nav);
+    border-radius: 5px;
+    background: #941c2e7b;
+    padding: 4px 7px 7px 7px;
+    line-height: 80px;
+    text-shadow: none;
+}
+
+/*welcome-section end*/
 
 /* main-section end*/
