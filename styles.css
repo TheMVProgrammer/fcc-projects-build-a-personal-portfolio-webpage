@@ -106,8 +106,7 @@ main {
 }
 
 #welcome-section > h1 {
-    color: var(--color-main-span);    
-    margin-top: -64px;
+    color: var(--color-main-span);
     font-size: 4rem;
     line-height: 50px;
     font-weight: 800;
@@ -145,7 +144,7 @@ main {
     }
 
     #projects > .project-tile {
-        width: 100%;
+        width: 300px;
         height: 300px;
         overflow: hidden;
         margin: 2rem 0;
@@ -255,6 +254,292 @@ main {
 
 /*media-queries*/
 
+/*320px-phones*/
 
+@media screen and (max-width: 320px) {
+
+/* main-section */
+
+main {
+    background-color: var(--bg-color-main);
+}
+
+/*welcome-section*/
+
+#welcome-section > h1 {
+    font-size: 3.5rem;
+}
+
+/*welcome-section end*/
+
+/*projects-section*/
+
+#projects > .project-tile {
+    width: 250px;
+    height: 250px;
+}
+
+#projects > .project-tile:nth-child(2) img {
+    object-position: -133px;
+}
+
+#projects > .project-tile:last-child img {
+    width: 275px;
+    object-position: -18px;
+}
+
+.project-desc {
+    padding: 8px;
+    
+}
+
+/*projects-section end*/
+
+/*main-section end*/
+
+}
+
+/*320px-phones end*/
+
+/*small-tablet-portrait*/
+
+@media screen and (max-width: 480px) {
+
+    /*header-section*/
+
+    .nav-container > ul > li {
+        padding: 8px;
+        font-size: 1.8rem;
+    }
+
+/*header-section end*/
+
+    #projects > .project-tile:nth-child(2) img {
+        object-position: -157px;
+    }
+
+    #projects > .project-tile:last-child img {
+        width: 325px;
+        object-position: -18px;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+
+/*header-section*/
+
+.nav-container > ul {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+/*header-section end*/
+
+/*welcome-section*/
+
+
+#welcome-section > h1 {
+    font-size: 4.5rem;
+}
+
+#welcome-section > p {
+    align-self: flex-start;
+    width: 90%;
+}
+
+/*welcome-section end*/
+
+/*projects-section*/
+
+#projects > .project-tile:nth-child(2) img {
+    object-position: -159px;
+}
+
+#projects > .project-tile:last-child img {
+    width: 325px;
+    object-position: -18px;
+}
+
+/*projects-section end*/
+
+}
+
+/*small-tablet-portrait end*/
+
+@media screen and (min-width: 601px) and (max-width: 767px) {
+
+    /*header-section*/
+
+    .nav-container > ul {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /*header-section end*/
+
+    /*welcome-section*/
+
+    #welcome-section > h1 {
+        text-align: center;
+    }
+
+    #welcome-section > p {
+        text-align: center;
+    }
+
+    /*welcome-section end*/
+
+    /*projects-section*/
+
+    #projects {        
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10% 0;
+    }
+
+    #projects h2 {        
+        width: 100%;
+        text-align: center;
+    }
+
+    #projects > .project-tile {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #projects > .project-tile:nth-child(2) img {
+        object-position: -158.5px;
+    }
+
+    #projects > .project-tile:last-child img {
+        width: 325px;
+        object-position: -18px;
+    }
+
+    /*projects-section end*/
+
+}
+
+
+/*tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+
+    /*header-section*/
+
+    .nav-container > ul {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /*header-section end*/
+
+    /*welcome-section*/
+
+    #welcome-section > h1 {
+        text-align: center;
+    }
+
+    #welcome-section > p {
+        text-align: center;
+    }
+
+    /*welcome-section end*/
+
+    /*projects-section*/
+
+    #projects {        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 10% 0;
+    }
+
+    #projects h2 {        
+        width: 100%;
+        text-align: center;
+    }
+
+    #projects > .project-tile {
+        width: 400px;
+        height: 400px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #projects > .project-tile:nth-child(2) img {
+        object-position: -213px;
+    }
+
+    #projects > .project-tile:last-child img {
+        width: 425px;
+        object-position: -18px;
+    }
+
+    /*projects-section end*/
+
+}
+
+/*tablet end*/
+
+/*desktop*/
+
+@media screen and (min-width: 1200px) {
+     /*header-section*/
+
+     .nav-container > ul {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /*header-section end*/
+
+    /*welcome-section*/
+
+    #welcome-section > h1 {
+        text-align: center;
+    }
+
+    #welcome-section > p {
+        text-align: center;
+    }
+
+    /*welcome-section end*/
+
+    /*projects-section*/
+
+    #projects {        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 10% 0;
+    }
+
+    #projects h2 {        
+        width: 100%;
+        text-align: center;
+    }
+
+    #projects > .project-tile {
+        width: 500px;
+        height: 500px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #projects > .project-tile:nth-child(2) img {
+        object-position: -263px;
+    }
+
+    #projects > .project-tile:last-child img {
+        width: 525px;
+        object-position: -18px;
+    }
+
+    /*projects-section end*/
+}
+
+/*desktop end*/
 
 /*media-queries end*/
