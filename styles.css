@@ -15,9 +15,13 @@
 }
 
 html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     scroll-padding: 64px;
+    background-color: var(--bg-color-main);
 }
 
 html {
@@ -208,11 +212,36 @@ main {
     letter-spacing: .3px;
 }
 
-#contact-section > a > i {
+#contact-section .tooltip > a > i {
     font-size: 6rem;
     color: var(--color-main-span);
     text-shadow: 1.2px  1.2px #000;;    
 }
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: var(--bg-color-nav);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 60px;
+    margin-left: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 /*contact-section end*/
 
@@ -306,7 +335,7 @@ main {
 @media screen and (max-width: 480px) {
 
     /*header-section*/
-
+    
     .nav-container > ul > li {
         padding: 8px;
         font-size: 1.8rem;
@@ -422,7 +451,7 @@ main {
 }
 
 
-/*tablet*/
+/*tablet and small desktop*/
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
 
@@ -433,9 +462,24 @@ main {
         justify-content: flex-end;
     }
 
+    .nav-container > ul > li:hover {
+        transform: translateY(-1.5px);
+        transition: transform ease .3s;
+    }
+    .nav-container > ul > li a:hover {
+        color: var(--color-main-span);
+        text-shadow: 1.2px  1.2px #000;
+        transition: all ease .3s;
+    }
+
     /*header-section end*/
 
     /*welcome-section*/
+
+    #welcome-section h1 > span:hover {
+        background: var(--color-main-span);
+        cursor: default;
+    }
 
     #welcome-section > h1 {
         text-align: center;
@@ -468,6 +512,28 @@ main {
         margin-right: 2%;
     }
 
+    #projects > .project-tile:hover img {
+        transform: scale(1.05);
+        transition: all ease .3s;
+        opacity: .5;
+    }
+
+    #projects > .project-tile:hover .project-desc h3{
+        display: none;
+    }
+
+    #projects > .project-tile:hover .project-desc p {
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    #projects > .project-tile > .project-desc p:hover {
+        color: var(--color-main-span);
+        text-shadow: 1.2px  1.2px #000;
+        transition: all ease .3s;
+    }
+
     #projects > .project-tile:nth-child(2) img {
         object-position: -213px;
     }
@@ -479,18 +545,64 @@ main {
 
     /*projects-section end*/
 
+    /*contact-section*/
+
+    #contact-section .tooltip > a > i:hover  {
+        transform: scale(.95);
+        transition: all ease .2s;
+    }
+
+    /*contact-section end*/
+
+    /*footer-section*/
+
+    .social-icons a:first-child:hover {
+        color: #55acee;
+        transform: translateY(-2px);
+        transition: all ease .2s;
+    }
+
+    .social-icons a:nth-child(2):hover {
+        color: #4183c4;
+        transform: translateY(-2px);
+        transition: all ease .2s;
+    }
+    
+    .social-icons a:nth-child(3):hover {
+        color: #0077b5;
+        transform: translateY(-2px);
+        transition: all ease .2s;
+    }
+
+    /*footer-section end*/
+
 }
 
-/*tablet end*/
+/*tablet and small desktop end*/
 
 /*desktop*/
 
 @media screen and (min-width: 1200px) {
+
+    html, body {
+        scroll-padding: 0;
+    }
+
      /*header-section*/
 
      .nav-container > ul {
         width: 100%;
         justify-content: flex-end;
+    }
+
+    .nav-container > ul > li:hover {
+        transform: translateY(-1.5px);
+        transition: transform ease .3s;
+    }
+    .nav-container > ul > li a:hover {
+        color: var(--color-main-span);
+        text-shadow: 1.2px  1.2px #000;
+        transition: all ease .3s;
     }
 
     /*header-section end*/
@@ -499,6 +611,11 @@ main {
 
     #welcome-section > h1 {
         text-align: center;
+    }
+
+    #welcome-section h1 > span:hover {
+        background: var(--color-main-span);
+        cursor: default;
     }
 
     #welcome-section > p {
@@ -524,8 +641,32 @@ main {
     #projects > .project-tile {
         width: 500px;
         height: 500px;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    #projects > .project-tile:hover img {
+        transform: scale(1.05);
+        transition: all ease .3s;
+        opacity: .5;
+    }
+
+    #projects > .project-tile:hover .project-desc h3{
+        display: none;
+    }
+
+    #projects > .project-tile:hover .project-desc p {
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    #projects > .project-tile > .project-desc p:hover {
+        color: var(--color-main-span);
+        text-shadow: 1.2px  1.2px #000;
+        transition: all ease .3s;
     }
 
     #projects > .project-tile:nth-child(2) img {
@@ -538,8 +679,41 @@ main {
     }
 
     /*projects-section end*/
+
+    #contact-section .tooltip > a > i:hover  {
+        transform: scale(.95);
+        transition: all ease .2s;
+    }
+
+    /*contact-section end*/
+
+    /*footer-section*/
+
+    .social-icons a:first-child:hover {
+        color: #55acee;
+        transform: translateY(-2px);
+        transition: all ease .2s;
+    }
+
+    .social-icons a:nth-child(2):hover {
+        color: #4183c4;
+        transform: translateY(-2px);
+        transition: all ease .2s;
+    }
+    
+    .social-icons a:nth-child(3):hover {
+        color: #0077b5;
+        transform: translateY(-2px);
+        transition: all ease .2s;
+    }
+
+    /*footer-section end*/
+
+
+
 }
 
 /*desktop end*/
 
 /*media-queries end*/
+
