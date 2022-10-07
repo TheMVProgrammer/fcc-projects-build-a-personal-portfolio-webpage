@@ -28,6 +28,12 @@ body {
     font-size: 1.6rem; /*16px*/
 }
 
+h2 {
+    font-size: 3rem;
+    letter-spacing: .8px;
+    color: var(--color-nav);
+}
+
 li {
     list-style: none;
 }
@@ -41,6 +47,10 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#contact-section, #footer {
+    text-align: center;
 }
 
 /*header-section*/
@@ -95,7 +105,7 @@ main {
     height: 100vh;
 }
 
-#welcome-section > h1{
+#welcome-section > h1 {
     color: var(--color-main-span);    
     margin-top: -64px;
     font-size: 4rem;
@@ -103,7 +113,7 @@ main {
     font-weight: 800;
     text-shadow: 1.2px  1.2px #000;
 }
-#welcome-section > p{
+#welcome-section > p , #contact-section > p {
     color: var(--color-nav); 
     font-size: 2rem;
     letter-spacing: 1px;
@@ -111,7 +121,7 @@ main {
     padding: 10px 0;
 }
 
-#welcome-section h1 > span{
+#welcome-section h1 > span {
     color: var(--color-nav);
     text-align: right;
     border: 3px solid var(--color-nav);
@@ -131,10 +141,7 @@ main {
     }
 
     #projects h2 {
-        margin-bottom: 10%;
-        font-size: 3rem;
-        letter-spacing: .8px;
-        color: var(--color-nav);
+        margin-bottom: 10%;        
     }
 
     #projects > .project-tile {
@@ -194,6 +201,53 @@ main {
     height: calc(100vh - 64px);
 }
 
+#contact-section h2{
+    margin-top: -64px;
+}
+
+#contact-section > p {
+    letter-spacing: .3px;
+}
+
+#contact-section > a > i {
+    font-size: 6rem;
+    color: var(--color-main-span);
+    text-shadow: 1.2px  1.2px #000;;    
+}
+
 /*contact-section end*/
 
 /* main-section end*/
+ 
+/*footer-section*/
+
+#footer {
+    margin-top: -144px;
+    width: 100%;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: var(--bg-color-main);
+    color: var(--color-nav);
+}
+
+.social-icons {
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: 2rem;
+}
+
+.social-icons a {
+    color: var(--color-nav);
+    margin: 0 16px;
+}
+
+#footer > small {
+    word-spacing: .3rem;
+}
+
+/*footer-section end*/
